@@ -22,7 +22,7 @@
     />
 </head>
 
-<body>
+<body class="bg-gray-100">
 <header>
 <!--Sidebar Menu-->
 <div class="antialiased" id="app">
@@ -30,7 +30,7 @@
       <!-- !showmenu para que no lo muestre al iniciar-->
     <div v-if="!showmenu">
       <button @click="showmenu = !showmenu" class="fixed top-0 left-0 bottom-0 left-0 h-full w-full"></button>
-      <div class="w-64 min-h-screen p-5 bg-gray-200 fixed right-0 top-0 shadow-2xl ease-in-out transition-transform transition-medium">
+      <div class="w-64 min-h-screen p-5 bg-purple-800 text-white fixed right-0 top-0 shadow-2xl ease-in-out transition-transform transition-medium">
       
         <nav class=" "  >
           <!--Datos del Usuario-->
@@ -140,7 +140,7 @@
   </transition>
 
   <!--Header menu-->
-  <nav class="flex items-center bg-gray-800 p-3 flex-wrap">
+  <nav class="flex items-center bg-purple-800 p-3 flex-wrap text-gray-900">
     <!--Boton para accion en dispositivo no movil-->
     <button @click="showmenu = !showmenu" class=" inline-flex m-3"> 
       <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 20 20" fill="#fff">
@@ -217,11 +217,11 @@
     </section>
     
     <!--Hover DataTable-->
-    <div class="flex flex-col ml-5 mr-5 mt-20">
-      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-            <table class="min-w-full divide-y divide-gray-200">
+    <div class="flex flex-col ml-5 mr-5 mt-20" >
+      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8" >
+        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8" >
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" >
+            <table class="min-w-full divide-y divide-gray-200 shadow-xl">
               <thead class="bg-gray-50">
                 <h1 class="font-medium text-gray-700 m-5">Hover Data Table </h1>
                 <tr>
@@ -533,7 +533,7 @@
       </div>
       <div>
         <nav class="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
-          <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50">
+          <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-purple-700 hover:text-white">
             
             <!-- Heroicon name: solid/chevron-left -->
             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -541,23 +541,23 @@
             </svg>
             Previous
           </a>
-          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white ">
             1
           </a>
-          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
             2
           </a>
-          <a href="#" class="hidden md:inline-flex relative items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+          <a href="#" class="hidden md:inline-flex relative items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
             3
           </a>
          
-          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
             4
           </a>
-          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
             5
           </a>
-          <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50">
+          <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-purple-700 hover:text-white">
            Next
             <!-- Heroicon name: solid/chevron-right -->
             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -904,7 +904,7 @@
     </div>
     <div>
       <nav class="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
-        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50">
+        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-purple-700 hover:text-white">
           
           <!-- Heroicon name: solid/chevron-left -->
           <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -912,23 +912,23 @@
           </svg>
           Previous
         </a>
-        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
           1
         </a>
-        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
           2
         </a>
-        <a href="#" class="hidden md:inline-flex relative items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+        <a href="#" class="hidden md:inline-flex relative items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
           3
         </a>
        
-        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
           4
         </a>
-        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
           5
         </a>
-        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50">
+        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-purple-700 hover:text-white">
          Next
           <!-- Heroicon name: solid/chevron-right -->
           <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
