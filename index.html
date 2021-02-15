@@ -12,7 +12,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
       integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY="
       crossorigin="anonymous"
-      
+
     />
     <link
       rel="stylesheet"
@@ -20,6 +20,7 @@
       integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc="
       crossorigin="anonymous"
     />
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/proxy/-80-sTqHwPQY6wNQJByzGh3xI7CUeJ5Y-9etZ60J5DjubYTLuaUJoZPezSEwQm2T8HZ3JfOVTyUJWz20ESKZUuYEsOk-Ybp8aQ" />
 </head>
 
 <body class="bg-gray-100">
@@ -30,18 +31,18 @@
       <!-- !showmenu para que no lo muestre al iniciar-->
     <div v-if="!showmenu">
       <button @click="showmenu = !showmenu" class="fixed top-0 left-0 bottom-0 left-0 h-full w-full"></button>
-      <div class="w-64 min-h-screen p-5 bg-purple-700 text-white h-full top-0 shadow-2xl ease-in-out transition-transform transition-medium">
+      <div class="w-64 min-h-screen p-5 bg-gray-900 text-white h-full top-0 shadow-2xl ease-in-out transition-transform transition-medium">
       
         <nav class=" "  >
           <!--Datos del Usuario-->
-          <div class="flex flex-row " >
+          <div class="flex flex-row my-8" >
             <img class="w-20  mx-3 rounded-full bg-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
             <p class="self-center " >Nombre de Usuario</p>
           </div>
           
           <!--Boton de busqueda-->
           <div class="relative text-gray-600 my-3">
-            <input type="search" name="serch" placeholder="Search" class="bg-white w-full h-10 px-5 pr-10 rounded-full text-sm focus:outline-none">
+            <input type="search" name="serch" placeholder="Search" class="w-full h-10 px-5 pr-10 bg-gray-700 text-sm focus:outline-none">
             <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
               <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
                 <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
