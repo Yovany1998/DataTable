@@ -23,19 +23,19 @@
 </head>
 
 <body class="bg-gray-100">
-<header>
+
 <!--Sidebar Menu-->
-<div class="antialiased" id="app">
-  <transition name="slide">
+<section class="bg-gray-100 font-sans flex flex-row leading-normal tracking-normal" id="app">
+  <transition name="">
       <!-- !showmenu para que no lo muestre al iniciar-->
     <div v-if="!showmenu">
       <button @click="showmenu = !showmenu" class="fixed top-0 left-0 bottom-0 left-0 h-full w-full"></button>
-      <div class="w-64 min-h-screen p-5 bg-purple-800 text-white fixed right-0 top-0 shadow-2xl ease-in-out transition-transform transition-medium">
+      <div class="w-64 min-h-screen p-5 bg-purple-700 text-white h-full top-0 shadow-2xl ease-in-out transition-transform transition-medium">
       
         <nav class=" "  >
           <!--Datos del Usuario-->
           <div class="flex flex-row " >
-            <img class="w-20  mx-3 rounded-full bg-white" src="https://www.cecyt13.ipn.mx/assets/files/cecyt13/img/estudiantes/1234.png" alt="">
+            <img class="w-20  mx-3 rounded-full bg-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
             <p class="self-center " >Nombre de Usuario</p>
           </div>
           
@@ -138,143 +138,484 @@
       </div>
     </div>
   </transition>
-
-  <!--Header menu-->
-  <nav class="flex items-center bg-purple-800 p-3 flex-wrap text-gray-900">
-    <!--Boton para accion en dispositivo no movil-->
-    <button @click="showmenu = !showmenu" class=" inline-flex m-3"> 
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 20 20" fill="#fff">
-        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
-      </svg> 
-    </button>
-    <a href="#" class="p-2 mr-4 inline-flex items-center">
-      <svg
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        class="fill-current text-white h-8 w-8 mr-2"
-      >
-        
-      </svg>
-      <span class="text-xl text-white font-bold uppercase tracking-wide"
-        >AdminLTE</span
-      >
-    </a>
-    
-    <div
-      class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
-      id="navigation"
-    >
+  <section class=" w-full flex flex-col bg-gray-100 ">
+    <!--Header menu-->
+    <nav class="flex items-center bg-purple-800 p-3 flex-wrap text-gray-900">
+      <!--Boton para accion en dispositivo no movil-->
+      <button @click="showmenu = !showmenu" class=" inline-flex m-3"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 20 20" fill="#fff">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+        </svg> 
+      </button>
+      <a href="#" class="p-2 mr-4 inline-flex items-center">
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="fill-current text-white h-8 w-8 mr-2"
+        >
+          
+        </svg>
+        <span class="text-xl text-white font-bold uppercase tracking-wide"
+          >AdminLTE</span
+        >
+      </a>
+      
       <div
-        class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
+        class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
+        id="navigation"
       >
-        <a
-          href="#"
-          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+        <div
+          class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
         >
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+          <i class="fa fa-envelope-o"></i>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+          <i class="fa fa-bell-o"></i>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+          <i class="fa fa-flag-o"></i>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+          <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+          <i class="fa fa-gears"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+        
+
+      <!-- Tablas -->
+    <main class=" w-full items-center p-4" >
+        <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+          <div class="flex flex-col ml-5 mr-100 mt-300">
+            <div class="-my-2 overflow-x-auto sm:-mx-200 lg:-mx-100">
+              <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                  <h1 style="font-size: 30px;">DataTables</h1><div class="col-sm-6">
+                  <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                      <a href="" class="breadcrumbs__link">Home</a>
+                    </li>
+              
+                    <li class="breadcrumbs__item">
+                      <a href=""class="breadcrumbs__link">Tables</a>
+                    </li>
+              
+                    <li class="breadcrumbs__item">
+                      <a href="" class="breadcrumbs__link breadcrumbs__link--active">DataTables</a>
+                    </li>
+                  </ul>
+                  
+                </div><table class="min-w-full divide-y divide-gray-10">
+                  <thead class="bg-gray-10">
+          </thead>
+        </table>
+        
+      
+      <!--Hover DataTable-->
+      <div class="flex flex-col ml-5 mr-5 mt-20" >
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8" >
+          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8" >
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" >
+              <table class="min-w-full divide-y divide-gray-200 shadow-xl">
+                <thead class="bg-gray-50">
+                  <h1 class="font-medium text-gray-700 m-5">Hover Data Table </h1>
+                  <tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                      <b>Renderingengie</b>     
+                      <button style="float: right;">
+                        <img src="./img/engine.png">
+                      </button> 
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                      <b>Browser</b>
+                      <button style="float: right;">
+                        <img src="./img/browser.png">
+                      </button> 
+                      
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                      <b>Platform(s)</b>
+                      <button style="float: right;">
+                        <img src="./img/browser.png">
+                      </button> 
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                      <b>Engine versión</b>
+                      <button style="float: right;">
+                        <img src="./img/browser.png">
+                      </button> 
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                      <b>CSS grade</b>
+                      <button style="float: right;">
+                        <img src="./img/browser.png">
+                      </button> 
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-900">
+                            Gecko
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">               
+                      <div class="text-sm text-gray-900">Firefox 1.0</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-900">Win98+ /OSX.2+</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                        <div class="text-sm text-gray-900">1.7</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                      <div class="text-sm text-gray-900">A</div>
+                  </td>
+                    </tr>
+    
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="text-sm text-gray-900">
+                              Gecko
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap">               
+                        <div class="text-sm text-gray-900">Firefox 1.5</div>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="text-sm text-gray-900">Win98+ /OSX.2+</div>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          <div class="text-sm text-gray-900">1.8</div>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                        <div class="text-sm text-gray-900">A</div>
+                    </td>
+                      </tr>
+    
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-gray-900">
+                                Gecko
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">               
+                          <div class="text-sm text-gray-900">Firefox 2.0</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-gray-900">Win98+ /OSX.2+</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <div class="text-sm text-gray-900">1.8</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          <div class="text-sm text-gray-900">A</div>
+                      </td>
+                        </tr>
+    
+                        <tr>
+                          <td class="px-6 py-4 whitespace-nowrap">
+                              <div class="text-sm text-gray-900">
+                                  Gecko
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="px-6 py-4 whitespace-nowrap">               
+                            <div class="text-sm text-gray-900">Firefox 3.0</div>
+                          </td>
+                          <td class="px-6 py-4 whitespace-nowrap">
+                              <div class="text-sm text-gray-900">Win98+ /OSX.3+</div>
+                          </td>
+                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                              <div class="text-sm text-gray-900">1.9</div>
+                          </td>
+                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <div class="text-sm text-gray-900">A</div>
+                        </td>
+                          </tr>
+    
+                          <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">
+                                    Gecko
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">               
+                              <div class="text-sm text-gray-900">Camino 1.0</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">OSX.2+</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="text-sm text-gray-900">1.8</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                              <div class="text-sm text-gray-900">A</div>
+                          </td>
+                            </tr>
+    
+                            <tr>
+                              <td class="px-6 py-4 whitespace-nowrap">
+                                  <div class="text-sm text-gray-900">
+                                      Gecko
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td class="px-6 py-4 whitespace-nowrap">               
+                                <div class="text-sm text-gray-900">Camino 1.5</div>
+                              </td>
+                              <td class="px-6 py-4 whitespace-nowrap">
+                                  <div class="text-sm text-gray-900">OSX.3+</div>
+                              </td>
+                              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                  <div class="text-sm text-gray-900">1.8</div>
+                              </td>
+                              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="text-sm text-gray-900">A</div>
+                            </td>
+                              </tr>
+    
+                              <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">
+                                        Gecko
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">               
+                                  <div class="text-sm text-gray-900">Netscape 7.2</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">Win98+ /Mac OS 8.5-9.2</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                    <div class="text-sm text-gray-900">1.7</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                  <div class="text-sm text-gray-900">A</div>
+                              </td>
+                                </tr>
+    
+                                <tr>
+                                  <td class="px-6 py-4 whitespace-nowrap">
+                                      <div class="text-sm text-gray-900">
+                                          Gecko
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="px-6 py-4 whitespace-nowrap">               
+                                    <div class="text-sm text-gray-900">Netscape Broeser 8</div>
+                                  </td>
+                                  <td class="px-6 py-4 whitespace-nowrap">
+                                      <div class="text-sm text-gray-900">Win98SE+</div>
+                                  </td>
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                      <div class="text-sm text-gray-900">1.7</div>
+                                  </td>
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                    <div class="text-sm text-gray-900">A</div>
+                                </td>
+                                  </tr>
+    
+                                  <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">
+                                            Gecko
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">               
+                                      <div class="text-sm text-gray-900">Netscape Navigator 9</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Win98+ /OSX.2+</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                        <div class="text-sm text-gray-900">1.8</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                      <div class="text-sm text-gray-900">A</div>
+                                  </td>
+                                    </tr>
+    
+                                    <tr>
+                                      <td class="px-6 py-4 whitespace-nowrap">
+                                          <div class="text-sm text-gray-900">
+                                              Gecko
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td class="px-6 py-4 whitespace-nowrap">               
+                                        <div class="text-sm text-gray-900">Moxila 1.0</div>
+                                      </td>
+                                      <td class="px-6 py-4 whitespace-nowrap">
+                                          <div class="text-sm text-gray-900">Win95+ /OSX.1+</div>
+                                      </td>
+                                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                          <div class="text-sm text-gray-900">1</div>
+                                      </td>
+                                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                        <div class="text-sm text-gray-900">A</div>
+                                    </td>
+                                      </tr>
+    
+                                      <thead class="bg-gray-50">
+                                        <tr>
+                                        
+                                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider" >
+                                            <b>Renderingengie</b>
+                                          
+                                          </th>
+                                        <div>
+                                        </div>
+                                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                                          <b>Browser</b>
+                                          </th>
+                                        
+                                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                                            <b>Platform(s)</b>
+                                          </th>
+                                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                                            <b>Engine versión</b>
+                                          </th>
+                                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                                            <b>CSS grade</b>
+                                          </th>
+                                        </tr>
+                                      </thead>
+      
+                  <!-- More items... -->
+                </tbody>
+              </table>
+              <!-- 
+      barra -->
+      <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+      <div class="flex-1 flex justify-between sm:hidden">
+        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-900">
+          Previous
         </a>
-        <a
-          href="#"
-          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-        >
-        <i class="fa fa-envelope-o"></i>
-        </a>
-        <a
-          href="#"
-          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-        >
-        <i class="fa fa-bell-o"></i>
-        </a>
-        <a
-          href="#"
-          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-        >
-        <i class="fa fa-flag-o"></i>
-        </a>
-        <a
-          href="#"
-          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-        >
-        <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
-        </a>
-        <a
-          href="#"
-          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-        >
-        <i class="fa fa-gears"></i>
+        <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-900">
+          Next
         </a>
       </div>
+      <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+        <div>
+          <p class="text-sm text-gray-700">
+            Showing
+            <span class="font-medium">1</span>
+            to
+            <span class="font-medium">10</span>
+            of
+            <span class="font-medium">57</span>
+            results
+          </p>
+        </div>
+        <div>
+          <nav class="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
+            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-purple-700 hover:text-white">
+              
+              <!-- Heroicon name: solid/chevron-left -->
+              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              Previous
+            </a>
+            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white ">
+              1
+            </a>
+            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
+              2
+            </a>
+            <a href="#" class="hidden md:inline-flex relative items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
+              3
+            </a>
+          
+            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
+              4
+            </a>
+            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
+              5
+            </a>
+            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-purple-700 hover:text-white">
+            Next
+              <!-- Heroicon name: solid/chevron-right -->
+              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </div>
     </div>
-  </nav>
-</div>
-      
-</header>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Tablas -->
-    <main class=" w-full items-center p-4 " >
-      <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div class="flex flex-col ml-5 mr-100 mt-300">
-          <div class="-my-2 overflow-x-auto sm:-mx-200 lg:-mx-100">
-            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-              <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                <h1 style="font-size: 30px;">DataTables</h1><div class="col-sm-6">
-                <ul class="breadcrumbs">
-                  <li class="breadcrumbs__item">
-                    <a href="" class="breadcrumbs__link">Home</a>
-                  </li>
-            
-                  <li class="breadcrumbs__item">
-                    <a href=""class="breadcrumbs__link">Tables</a>
-                  </li>
-            
-                  <li class="breadcrumbs__item">
-                    <a href="" class="breadcrumbs__link breadcrumbs__link--active">DataTables</a>
-                  </li>
-                </ul>
-                
-              </div><table class="min-w-full divide-y divide-gray-10">
-                <thead class="bg-gray-10">
-        </thead>
-      </table>
-      
-  
-       <style>
-        .breadcrumbs {
-          padding: -30px;
-          font-family: sans-serif;
-          margin-left:60em;
-          margin-top: -20px
-  
-        }
-  
-        .breadcrumbs__item{
-          display: inline-block;
-        }
-  
-        .breadcrumbs__item:not(:last-of-type)::after{
-          content: '/';
-          margin: 0 5px;
-          color: #cccccc;
-        }
-  
-        .breadcrumbs__link {
-          text-decoration: none;
-          color: #999999;
-        }
-  
-        .breadcrumbs__link:hover{
-          text-decoration: underline;
-        }
-      </style>
-    
-    <!--Hover DataTable-->
-    <div class="flex flex-col ml-5 mr-5 mt-20" >
-      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8" >
-        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8" >
-          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" >
-            <table class="min-w-full divide-y divide-gray-200 shadow-xl">
+
+
+      <!--Data Table With Full Features-->
+      <!-- Tabla #2-->
+  </head>
+  <body>
+
+  <div class="flex flex-col ml-5 mr-5">
+      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
               <thead class="bg-gray-50">
-                <h1 class="font-medium text-gray-700 m-5">Hover Data Table </h1>
+                <h1 class="font-medium text-gray-700 m-5">Data Table With Full Features </h1>
+
+                <!--Barra Buscar-->
+                <div class="col-sm-6" ></div><div id="example1_filter" class="dataTables_filter"  ><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Buscar:</font></font><input type="search" class="form-control input-sm" placeholder="" aria-controls="example1"></label></div></div>
+        
+                <!--Barra contador-->
+          <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mostrar </font></font>
+          <select name="example1_length" aria-controls="example1" class="form-control input-sm"> <option value="10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></option><option value="25"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">25</font></font></option><option value="50"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">50</font></font></option><option value="100"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">100</font></font></option></select>
+          <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> entradas</font></font>
                 <tr>
                   <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
                     <b>Renderingengie</b>     
@@ -331,7 +672,7 @@
                     <div class="text-sm text-gray-900">A</div>
                 </td>
                   </tr>
-  
+
                   <tr>
                     <td class="px-6 py-4 whitespace-nowrap">
                         <div class="text-sm text-gray-900">
@@ -353,7 +694,7 @@
                       <div class="text-sm text-gray-900">A</div>
                   </td>
                     </tr>
-  
+
                     <tr>
                       <td class="px-6 py-4 whitespace-nowrap">
                           <div class="text-sm text-gray-900">
@@ -375,7 +716,7 @@
                         <div class="text-sm text-gray-900">A</div>
                     </td>
                       </tr>
-  
+
                       <tr>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="text-sm text-gray-900">
@@ -397,7 +738,7 @@
                           <div class="text-sm text-gray-900">A</div>
                       </td>
                         </tr>
-  
+
                         <tr>
                           <td class="px-6 py-4 whitespace-nowrap">
                               <div class="text-sm text-gray-900">
@@ -419,7 +760,7 @@
                             <div class="text-sm text-gray-900">A</div>
                         </td>
                           </tr>
-  
+
                           <tr>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="text-sm text-gray-900">
@@ -441,7 +782,7 @@
                               <div class="text-sm text-gray-900">A</div>
                           </td>
                             </tr>
-  
+
                             <tr>
                               <td class="px-6 py-4 whitespace-nowrap">
                                   <div class="text-sm text-gray-900">
@@ -463,7 +804,7 @@
                                 <div class="text-sm text-gray-900">A</div>
                             </td>
                               </tr>
-  
+
                               <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="text-sm text-gray-900">
@@ -485,7 +826,7 @@
                                   <div class="text-sm text-gray-900">A</div>
                               </td>
                                 </tr>
-  
+
                                 <tr>
                                   <td class="px-6 py-4 whitespace-nowrap">
                                       <div class="text-sm text-gray-900">
@@ -507,7 +848,7 @@
                                     <div class="text-sm text-gray-900">A</div>
                                 </td>
                                   </tr>
-  
+
                                   <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="text-sm text-gray-900">
@@ -529,18 +870,18 @@
                                       <div class="text-sm text-gray-900">A</div>
                                   </td>
                                     </tr>
-  
+
                                     <thead class="bg-gray-50">
                                       <tr>
-                                       
+                                      
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider" >
                                           <b>Renderingengie</b>
-                                         
+                                        
                                         </th>
                                       <div>
                                       </div>
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
-                                         <b>Browser</b>
+                                        <b>Browser</b>
                                         </th>
                                       
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
@@ -553,9 +894,9 @@
                                           <b>CSS grade</b>
                                         </th>
                                       </tr>
+                                      
                                     </thead>
-    
-                <!-- More items... -->
+                                      <!-- More items... -->
               </tbody>
             </table>
             <!-- 
@@ -592,7 +933,7 @@
             </svg>
             Previous
           </a>
-          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white ">
+          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
             1
           </a>
           <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
@@ -601,7 +942,7 @@
           <a href="#" class="hidden md:inline-flex relative items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
             3
           </a>
-         
+        
           <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
             4
           </a>
@@ -609,7 +950,7 @@
             5
           </a>
           <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-purple-700 hover:text-white">
-           Next
+          Next
             <!-- Heroicon name: solid/chevron-right -->
             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -619,388 +960,17 @@
       </div>
     </div>
   </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
-
-    <!--Data Table With Full Features-->
-     <!-- Tabla #2-->
-</head>
-<body>
-
-<div class="flex flex-col ml-5 mr-5">
-    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-      <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-          <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-gray-50">
-              <h1 class="font-medium text-gray-700 m-5">Data Table With Full Features </h1>
-
-              <!--Barra Buscar-->
-              <div class="col-sm-6" ></div><div id="example1_filter" class="dataTables_filter"  ><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Buscar:</font></font><input type="search" class="form-control input-sm" placeholder="" aria-controls="example1"></label></div></div>
-       
-              <!--Barra contador-->
-         <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mostrar </font></font>
-         <select name="example1_length" aria-controls="example1" class="form-control input-sm"> <option value="10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></option><option value="25"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">25</font></font></option><option value="50"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">50</font></font></option><option value="100"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">100</font></font></option></select>
-         <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> entradas</font></font>
-              <tr>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
-                  <b>Renderingengie</b>     
-                  <button style="float: right;">
-                    <img src="./img/engine.png">
-                  </button> 
-                </th>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
-                  <b>Browser</b>
-                  <button style="float: right;">
-                    <img src="./img/browser.png">
-                  </button> 
-                  
-                </th>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
-                  <b>Platform(s)</b>
-                  <button style="float: right;">
-                    <img src="./img/browser.png">
-                  </button> 
-                </th>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
-                  <b>Engine versión</b>
-                  <button style="float: right;">
-                    <img src="./img/browser.png">
-                  </button> 
-                </th>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
-                  <b>CSS grade</b>
-                  <button style="float: right;">
-                    <img src="./img/browser.png">
-                  </button> 
-                </th>
-              </tr>
-            </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
-              <tr>
-                <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="text-sm text-gray-900">
-                        Gecko
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap">               
-                  <div class="text-sm text-gray-900">Firefox 1.0</div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="text-sm text-gray-900">Win98+ /OSX.2+</div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    <div class="text-sm text-gray-900">1.7</div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                  <div class="text-sm text-gray-900">A</div>
-              </td>
-                </tr>
-
-                <tr>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">
-                          Gecko
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap">               
-                    <div class="text-sm text-gray-900">Firefox 1.5</div>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">Win98+ /OSX.2+</div>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      <div class="text-sm text-gray-900">1.8</div>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    <div class="text-sm text-gray-900">A</div>
-                </td>
-                  </tr>
-
-                  <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="text-sm text-gray-900">
-                            Gecko
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">               
-                      <div class="text-sm text-gray-900">Firefox 2.0</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="text-sm text-gray-900">Win98+ /OSX.2+</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        <div class="text-sm text-gray-900">1.8</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      <div class="text-sm text-gray-900">A</div>
-                  </td>
-                    </tr>
-
-                    <tr>
-                      <td class="px-6 py-4 whitespace-nowrap">
-                          <div class="text-sm text-gray-900">
-                              Gecko
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 whitespace-nowrap">               
-                        <div class="text-sm text-gray-900">Firefox 3.0</div>
-                      </td>
-                      <td class="px-6 py-4 whitespace-nowrap">
-                          <div class="text-sm text-gray-900">Win98+ /OSX.3+</div>
-                      </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          <div class="text-sm text-gray-900">1.9</div>
-                      </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        <div class="text-sm text-gray-900">A</div>
-                    </td>
-                      </tr>
-
-                      <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-900">
-                                Gecko
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">               
-                          <div class="text-sm text-gray-900">Camino 1.0</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-900">OSX.2+</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            <div class="text-sm text-gray-900">1.8</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          <div class="text-sm text-gray-900">A</div>
-                      </td>
-                        </tr>
-
-                        <tr>
-                          <td class="px-6 py-4 whitespace-nowrap">
-                              <div class="text-sm text-gray-900">
-                                  Gecko
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="px-6 py-4 whitespace-nowrap">               
-                            <div class="text-sm text-gray-900">Camino 1.5</div>
-                          </td>
-                          <td class="px-6 py-4 whitespace-nowrap">
-                              <div class="text-sm text-gray-900">OSX.3+</div>
-                          </td>
-                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                              <div class="text-sm text-gray-900">1.8</div>
-                          </td>
-                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            <div class="text-sm text-gray-900">A</div>
-                        </td>
-                          </tr>
-
-                          <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm text-gray-900">
-                                    Gecko
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">               
-                              <div class="text-sm text-gray-900">Netscape 7.2</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm text-gray-900">Win98+ /Mac OS 8.5-9.2</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                <div class="text-sm text-gray-900">1.7</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                              <div class="text-sm text-gray-900">A</div>
-                          </td>
-                            </tr>
-
-                            <tr>
-                              <td class="px-6 py-4 whitespace-nowrap">
-                                  <div class="text-sm text-gray-900">
-                                      Gecko
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="px-6 py-4 whitespace-nowrap">               
-                                <div class="text-sm text-gray-900">Netscape Broeser 8</div>
-                              </td>
-                              <td class="px-6 py-4 whitespace-nowrap">
-                                  <div class="text-sm text-gray-900">Win98SE+</div>
-                              </td>
-                              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                  <div class="text-sm text-gray-900">1.7</div>
-                              </td>
-                              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                <div class="text-sm text-gray-900">A</div>
-                            </td>
-                              </tr>
-
-                              <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-900">
-                                        Gecko
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">               
-                                  <div class="text-sm text-gray-900">Netscape Navigator 9</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-900">Win98+ /OSX.2+</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                    <div class="text-sm text-gray-900">1.8</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                  <div class="text-sm text-gray-900">A</div>
-                              </td>
-                                </tr>
-
-                                <tr>
-                                  <td class="px-6 py-4 whitespace-nowrap">
-                                      <div class="text-sm text-gray-900">
-                                          Gecko
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="px-6 py-4 whitespace-nowrap">               
-                                    <div class="text-sm text-gray-900">Moxila 1.0</div>
-                                  </td>
-                                  <td class="px-6 py-4 whitespace-nowrap">
-                                      <div class="text-sm text-gray-900">Win95+ /OSX.1+</div>
-                                  </td>
-                                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                      <div class="text-sm text-gray-900">1</div>
-                                  </td>
-                                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                    <div class="text-sm text-gray-900">A</div>
-                                </td>
-                                  </tr>
-
-                                  <thead class="bg-gray-50">
-                                    <tr>
-                                     
-                                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider" >
-                                        <b>Renderingengie</b>
-                                       
-                                      </th>
-                                    <div>
-                                    </div>
-                                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
-                                       <b>Browser</b>
-                                      </th>
                                     
-                                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
-                                        <b>Platform(s)</b>
-                                      </th>
-                                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
-                                        <b>Engine versión</b>
-                                      </th>
-                                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
-                                        <b>CSS grade</b>
-                                      </th>
-                                    </tr>
-                                    
-                                  </thead>
-                                    <!-- More items... -->
-            </tbody>
-          </table>
-          <!-- 
-  barra -->
-  <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-  <div class="flex-1 flex justify-between sm:hidden">
-    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-900">
-      Previous
-    </a>
-    <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-900">
-      Next
-    </a>
-  </div>
-  <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-    <div>
-      <p class="text-sm text-gray-700">
-        Showing
-        <span class="font-medium">1</span>
-        to
-        <span class="font-medium">10</span>
-        of
-        <span class="font-medium">57</span>
-        results
-      </p>
-    </div>
-    <div>
-      <nav class="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
-        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-purple-700 hover:text-white">
-          
-          <!-- Heroicon name: solid/chevron-left -->
-          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-          </svg>
-          Previous
-        </a>
-        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
-          1
-        </a>
-        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
-          2
-        </a>
-        <a href="#" class="hidden md:inline-flex relative items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
-          3
-        </a>
-       
-        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
-          4
-        </a>
-        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-purple-700 hover:text-white">
-          5
-        </a>
-        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-900 hover:bg-purple-700 hover:text-white">
-         Next
-          <!-- Heroicon name: solid/chevron-right -->
-          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </nav>
-    </div>
-  </div>
-</div>
-
-
-                                  
 
 
 
 
 
 
-  </main>
-
+    </main>
+  
       
 <!-- <div class="flex flex-col ml-10  mr-10 "> -->
 
@@ -1010,7 +980,8 @@
       <h1 class="col-md-5 text-center">Copyright 2014-2019 AdminLTE.All rights reversed</h1>     
     </section> 
   </footer>
-
+</section>
+</section>
     <!--Scripts de animacion para el menu slide bar-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js" ></script>
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"></script>
@@ -1029,5 +1000,33 @@
       });
     </script>
     <!----------------------------------------------->
+    <style>
+      .breadcrumbs {
+        padding: -30px;
+        font-family: sans-serif;
+        margin-left:60em;
+        margin-top: -20px
+
+      }
+
+      .breadcrumbs__item{
+        display: inline-block;
+      }
+
+      .breadcrumbs__item:not(:last-of-type)::after{
+        content: '/';
+        margin: 0 5px;
+        color: #cccccc;
+      }
+
+      .breadcrumbs__link {
+        text-decoration: none;
+        color: #999999;
+      }
+
+      .breadcrumbs__link:hover{
+        text-decoration: underline;
+      }
+    </style>
 </body>
 </html>
