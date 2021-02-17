@@ -1,6 +1,11 @@
-DataTable
+# DataTable
 
-INTEGRANTES:
+## Acerca del proyecto
+Diseñamos una plantilla tomando como referencia la estructura de **AminLTE Data Tables** y usamos Tailwind CSS para construir el diseño.
+
+## Mockup
+![Mockup](./img/MockupDataTables.jpg)
+## Integrantes:
 
 Owen Ariel Valle Turcios 
 0318-2001-00020
